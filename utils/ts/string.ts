@@ -22,3 +22,18 @@ export function customToUppercase(str: string): string {
   }
   return result;
 }
+
+export function customToLowercase(str: string): string {
+  let lower: string = "";
+  for (let i = 0; i < str.length; i++) {
+    const code: number = str.charCodeAt(i);
+
+    // Check if character is uppercase (A-Z)
+    if (code >= 65 && code <= 90) {
+      lower += String.fromCharCode(code + 32); // Convert to lowercase
+    } else {
+      lower += str[i]; // Leave other characters as is
+    }
+  }
+  return lower;
+}

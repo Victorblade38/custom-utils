@@ -3,6 +3,7 @@ import {
   toUpper,
   isPalindrome,
   customToUppercase,
+  customToLowercase,
 } from "../../utils/js/string.js";
 
 describe("String Utilities (JS)", () => {
@@ -12,6 +13,10 @@ describe("String Utilities (JS)", () => {
 
   test("customUppercase should convert string to uppercase", () => {
     expect(customToUppercase("internship")).toBe("INTERNSHIP");
+  });
+
+  test("customLowercase should convert string to lowercase", () => {
+    expect(customToLowercase("INTERnship")).toBe("internship");
   });
 
   test("isPalindrome should check if a string is a palindrome", () => {
